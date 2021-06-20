@@ -6,7 +6,7 @@ function App() {
   return (
     <header>
       <Navbar />
-      <Card />
+      <Card/>
     </header>
   );
 }
