@@ -469,9 +469,26 @@ body {
   }
 
   .btn-buy {
-    margin-right: 1rem;
+    margin-right: 0rem;
+    width: 20px;
     color: $gold;
     border: 1px solid $gold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
+
+  .btn-details{
+    border: 1px solid $gold;
+}
+
+.count-input {
+  width: 40px;
+  height: 15px;
+  line-height: 15px;
+  border: 1px solid $gold;
+  color: $dark;
+  text-align: center;
+  padding: 4px 0;
+  background-color: #fff;
+  z-index: 2;
+}
 }

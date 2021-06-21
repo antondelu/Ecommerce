@@ -1,5 +1,6 @@
 import React from "react";
 import { Productos } from "./Productos";
+import { ItemCount } from "../Count/Itemcount";
 
 const Card = () => {
     return(
@@ -13,11 +14,10 @@ const Card = () => {
                 </div>
                 <figcaption className="caption">
                 <h3>{compo.name}</h3>
-                <a className="btn-buy" href="#">
-                Comprar
-                </a><br />
+                <ItemCount stock="10" initial="1" />
+               <br/>
                 <a className="btn-details" href="#">
-                  See details
+                  Agregar
                 </a>
               </figcaption>
             </figure>

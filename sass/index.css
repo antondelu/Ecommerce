@@ -426,9 +426,26 @@ body {
 }
 
 .gallery .item .caption .btn-buy {
-  margin-right: 1rem;
+  margin-right: 0rem;
+  width: 20px;
   color: #D4AF37;
   border: 1px solid #D4AF37;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+}
+
+.gallery .item .caption .btn-details {
+  border: 1px solid #D4AF37;
+}
+
+.gallery .item .caption .count-input {
+  width: 40px;
+  height: 15px;
+  line-height: 15px;
+  border: 1px solid #D4AF37;
+  color: #000;
+  text-align: center;
+  padding: 4px 0;
+  background-color: #fff;
+  z-index: 2;
 }
 /*# sourceMappingURL=index.css.map */
