@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../logo.svg";
 import {Menuitems} from "./Menuitems";
+
 const Navbar = () => {
   return (
     <nav>
@@ -20,7 +21,9 @@ const Navbar = () => {
           )
       })}
       </ul>
+      
     </nav>
+    
   
   );
 };

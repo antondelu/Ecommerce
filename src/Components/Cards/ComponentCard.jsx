@@ -14,6 +14,7 @@ const Card = () => {
                 </div>
                 <figcaption className="caption">
                 <h3>{compo.name}</h3>
+                <p>{compo.price}</p>
                 <ItemCount stock="10" initial="1" />
                <br/>
                 <a className="btn-details" href="#">
