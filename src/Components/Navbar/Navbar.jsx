@@ -21,7 +21,6 @@ const Navbar = () => {
           )
       })}
       </ul>
-      
     </nav>
     
   
