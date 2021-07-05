@@ -1,17 +1,21 @@
 import {useEffect, useState} from "react"
+import { useParams } from "react-router-dom"
 import {ItemDetail} from '../ItemDetail/ItemDetail.jsx'
 export const ItemDetailContainer = (props) => {
     const [description,setDescription] = useState([]);
+    let {id}= useParams()
    useEffect (()=>{
-   fetch("https://pokeapi.co/api/v2/pokemon/5")
+   fetch("/Productos.json")
    .then(response => response.json())
    .then (data =>{
-console.log(data.name)
-setDescription(data)
-console.log(description)
+console.log(data)
+ 
+const itemId = data.find (element => element.id == id)
+ setDescription(itemId);
+
 
    }) 
-},[])
+},[id])
 
 return(
     <>{

@@ -1,24 +1,23 @@
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Card from "./Components/Cards/ComponentCard.jsx";
 import "../src/index.scss";
-import imga from './Components/Navbar/port.jpg';
 import { ItemCount } from "./Components/Count/Itemcount.jsx";
 import {ItemDetailContainer} from "./Components/ItemDetailContainer/ItemDetailContainer.jsx"
-import { BrowserRouter, Router, Switch} from 'react-router-dom';
-
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import {But} from "./Components/Cards/button.jsx"
+import {ImgPor} from "./Components/Portada/PortadaImg.jsx"
+import {Home} from "./Components/HomeContainer/Home.jsx" 
 
 function App() {
   return (
     <BrowserRouter>
-    <header>
       <Navbar />
       <Switch>  
-     
-      </Switch>
-      <img className="photoPort" src={imga} alt="" />
-      <Card/>
-      <ItemDetailContainer/>
-    </header>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/productos" component={Card}/>
+        <Route exact path="/productos/:category" component={Card}/>
+        <Route exact path="/item/:id" component={ItemDetailContainer}/>
+              </Switch>
     </BrowserRouter>
   );
 }

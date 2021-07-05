@@ -1,17 +1,18 @@
 export  const Menuitems = [
     {
-        href:"#index",
-        class: "icon-home",
+        href:"/ ",
+        class: "fas fa-Allergies",
         name: "Home",
 
     },
+
     {
         href:"#about",
         class: "icon-user",
         name: "About", 
     },
     {
-        href:"#productos",
+        href:"/productos",
         class: "icon-thumbs-up-alt",
         name: "Productos", 
     },
