@@ -12,7 +12,7 @@ export const ItemCount = (props) => {
     return(
         <div>
             <button class="btn-buy"  onClick={resta}>-</button>
-            <input class="count-input" type="text" value= {valor} />
+            <input class="count-input" type="number"  min="1" max={props.stock} onChange={props.updateCantidad}/>
             <button  class="btn-buy"  onClick={suma}>+</button>
         </div>
     
