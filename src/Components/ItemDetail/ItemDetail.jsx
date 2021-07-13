@@ -1,19 +1,25 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { ItemCount } from "../Count/Itemcount";
 import {But} from "../Item/button.jsx"
 import { Link } from "react-router-dom";
+import { ShopContext } from "../../Context/cartContext.jsx";
+import {cart} from "../Cart/Cart.jsx"
 
 export const ItemDetail = (props) => {
+  const estadoGlobal = useContext (ShopContext)
   const [compra, setCompra] = useState(true);
   const [cantidad, setCantidad] = useState(1);
   const updateCantidad = (event) => {
 
-    setCantidad(parseInt(event.target.value)+1)
+    setCantidad(parseInt(event.target.value))
     console.log(cantidad)
 }
-const agregarCarrito = (evt) => {
-  console.log(evt)
+const agregarCarrito = (event) => {
+  let item2 = estadoGlobal.description
+  let cartArray = [estadoGlobal.cart]
+  let cartArrayNuevo = [...cartArray, {item2, cantidad}]
+  estadoGlobal.setCart(cartArrayNuevo)
   setCompra(false)
 }
 

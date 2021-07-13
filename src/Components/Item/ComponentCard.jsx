@@ -1,26 +1,28 @@
 import React from "react";
 import { ItemCount } from "../Count/Itemcount";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import {useState,useContext, useEffect } from "react";
 import { useParams } from "react-router";
+import { ShopContext } from "../../Context/cartContext.jsx";
+
 const Card = () => {
-  const [productos, setProductos] = useState([])
-  let { category } = useParams();
+const estadoGlobal = useContext(ShopContext)
+const [products, setProducts] = useState(estadoGlobal.productos);
+let { category } = useParams();
+  
 
   useEffect( () => {
-      fetch("/Productos.json")
-      .then(response => response.json())
-      .then(data =>{
-              const productsToShow = data.filter( element => element.category == category )
+
+              const productsToShow = estadoGlobal.productos.filter( element => element.category == category )
               console.log(productsToShow)
               
               !category 
-              ? setProductos(data)
-              : setProductos(productsToShow)
-            })
+              ? setProducts(estadoGlobal.productos)
+              : setProducts(productsToShow)
+          
           },[category])
     return(
-    productos.map((compo) => {
+  products.map((compo) => {
       return (
  
           <div className="gallery">

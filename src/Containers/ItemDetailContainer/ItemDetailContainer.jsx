@@ -1,27 +1,23 @@
-import {useEffect, useState} from "react"
+import {useContext, useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
 import {ItemDetail} from '../../Components/ItemDetail/ItemDetail.jsx'
+import { ShopContext } from "../../Context/cartContext.jsx"
 export const ItemDetailContainer = (props) => {
-    const [description,setDescription] = useState([]);
+    const estadoGlobal = useContext (ShopContext)
+    
+    
     let {id}= useParams()
    useEffect (()=>{
-   fetch("/Productos.json")
-   .then(response => response.json())
-   .then (data =>{
-console.log(data)
- 
-const itemId = data.find (element => element.id == id)
- setDescription(itemId);
+   
+const itemId = estadoGlobal.productos.find (element => element.id == id)
+estadoGlobal.setDescription(itemId);
 
-
-   }) 
 },[id])
 
 return(
-    <>{
-    !!Object.keys(description).length
-          ? <ItemDetail item={description} />   
-          : <h1>Loading...</h1>}
+    <>   
+     <ItemDetail item={estadoGlobal.description} />   
+         
     </>
 )
 }
