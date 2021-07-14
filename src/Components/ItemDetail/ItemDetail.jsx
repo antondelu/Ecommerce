@@ -9,18 +9,29 @@ import {cart} from "../Cart/Cart.jsx"
 export const ItemDetail = (props) => {
   const estadoGlobal = useContext (ShopContext)
   const [compra, setCompra] = useState(true);
-  const [cantidad, setCantidad] = useState(1);
+  const [cantidad, setCantidad] = useState();
   const updateCantidad = (event) => {
 
     setCantidad(parseInt(event.target.value))
     console.log(cantidad)
 }
 const agregarCarrito = (event) => {
-  let item2 = estadoGlobal.description
-  let cartArray = [estadoGlobal.cart]
-  let cartArrayNuevo = [...cartArray, {item2, cantidad}]
-  estadoGlobal.setCart(cartArrayNuevo)
-  setCompra(false)
+  let itemDetalle = estadoGlobal.description
+  let itemAgregado = {itemDetalle, cantidad}
+  const buscador = estadoGlobal.cart.find(producto => producto.itemDetalle.id == itemDetalle.id)
+  if(buscador){
+      if(itemDetalle === buscador.itemDetalle){
+          console.log(itemAgregado.cantidad)
+         
+          estadoGlobal.setCart([...estadoGlobal.cart, itemAgregado])
+      }else{
+          estadoGlobal.setCart([...estadoGlobal.cart, itemAgregado])
+      }
+      setCompra(false)
+  }else{
+      estadoGlobal.setCart([...estadoGlobal.cart, itemAgregado])
+    }
+    setCompra(false)
 }
 
 const Comprar = () => {

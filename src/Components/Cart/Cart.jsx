@@ -3,9 +3,21 @@ import { ShopContext } from "../../Context/cartContext"
 
 export const Cart  = () => {
     const estadoGlobal = useContext(ShopContext);
-    console.log(estadoGlobal.cart)
+    
+    let carrito = estadoGlobal.cart;
 return(
-    <h3 className="carrito">Hola soy el carrito !!</h3>
+    
+
+    carrito.map((element)=>{
+        return(
+<div className="element" key={element.itemDetalle.id}>
+    <img className={element.itemDetalle.class} src={element.itemDetalle.img} alt="" />
+                      <h1>{element.itemDetalle.name}</h1>
+                      <h2>{element.cantidad}</h2>
+                    </div>
+        )
+
+    })
 
     )
 } 
