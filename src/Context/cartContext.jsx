@@ -6,6 +6,9 @@ export const ShopComponentContext = ({children}) =>{
     const [productos, setProductos] = useState([])  
     const [description,setDescription] = useState([]);
     const [cart, setCart] = useState([])
+    const [valor,setValor] = useState(1);
+    const [cantidad, setCantidad] = useState();
+
     useEffect( () => {
         fetch("/Productos.json")
         .then(response => response.json())
@@ -16,7 +19,7 @@ export const ShopComponentContext = ({children}) =>{
             },[])
  
 
-    return <ShopContext.Provider value={{productos,setProductos,description,setDescription,cart,setCart}}>
+    return <ShopContext.Provider value={{productos,setProductos,description,setDescription,cart,setCart,valor,setValor,cantidad,setCantidad}}>
         {children}
     </ShopContext.Provider>
 }
