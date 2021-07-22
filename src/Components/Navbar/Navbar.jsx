@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className='navBar'>
       <ul>
       <li>
           <a href="#index">

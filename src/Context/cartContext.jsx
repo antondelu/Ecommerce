@@ -8,6 +8,22 @@ export const ShopComponentContext = ({children}) =>{
     const [cart, setCart] = useState([])
     const [valor,setValor] = useState(1);
     const [cantidad, setCantidad] = useState();
+    const [totalCarrito, setTotalCarrito] = useState(0);
+
+
+    const vaciarCarrito= ()=>{
+        setCart([])
+        setTotalCarrito (0)
+    }
+    const deleteItem =(productos)=>{
+let carritoFiltrado = cart.filter(el=> el.itemDetalle.id !== productos)
+setCart(carritoFiltrado); 
+
+let productToDelete = cart.find(el => el.itemDetalle.id === productos)
+let priceToSubstract = productToDelete.itemDetalle.price * productToDelete.cantidadContext
+setTotalCarrito(totalCarrito - priceToSubstract)
+    }
+  
 
     useEffect( () => {
         fetch("/Productos.json")
@@ -19,7 +35,7 @@ export const ShopComponentContext = ({children}) =>{
             },[])
  
 
-    return <ShopContext.Provider value={{productos,setProductos,description,setDescription,cart,setCart,valor,setValor,cantidad,setCantidad}}>
+    return <ShopContext.Provider value={{productos,setProductos,description,setDescription,cart,setCart,valor,setValor,cantidad,setCantidad,totalCarrito,setTotalCarrito, vaciarCarrito,deleteItem}}>
         {children}
     </ShopContext.Provider>
 }

@@ -14,19 +14,26 @@ export const ItemDetail = (props) => {
     estadoGlobal.setValor(1)
 }
 const agregarCarrito = (event) => {
-  updateCantidad();  let itemDetalle = estadoGlobal.description
+  updateCantidad(); 
+   let itemDetalle = estadoGlobal.description
   let cantidadContext = estadoGlobal.valor
   let itemAgregado = {itemDetalle, cantidadContext}
   const buscador = estadoGlobal.cart.find(producto => producto.itemDetalle.id == itemDetalle.id)
   if(buscador){
       if(itemDetalle === buscador.itemDetalle){
+        estadoGlobal.setTotalCarrito(estadoGlobal.totalCarrito + estadoGlobal.cantidad * itemDetalle.price)
         buscador.cantidadContext += estadoGlobal.cantidad
       }else{
           estadoGlobal.setCart([...estadoGlobal.cart, itemAgregado])
+          estadoGlobal.setTotalCarrito(estadoGlobal.totalCarrito + cantidadContext * itemDetalle.price)
+
       }
       setCompra(false)
   }else{
+    console.log(itemAgregado)
+    console.log(estadoGlobal.totalCarrito,cantidadContext,itemDetalle.price)
       estadoGlobal.setCart([...estadoGlobal.cart, itemAgregado])
+      estadoGlobal.setTotalCarrito(estadoGlobal.totalCarrito + cantidadContext * itemDetalle.price)
     }
     setCompra(false)
 }
@@ -53,7 +60,8 @@ const Comprar = () => {
               <h1>{props.item.name}</h1>
               <p>{props.item.price}</p>
               <br />
-              {!!compra
+              {
+              !!compra
                     ? <div><ItemCount stock={props.stock} initial="1" /> <But funcion={agregarCarrito} texto={'Agregar'}/></div>
                     : <Link to="/cart"> <But funcion={Comprar} texto={'Comprar'}/> </Link>
                     }
