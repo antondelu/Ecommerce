@@ -11,7 +11,7 @@ return(
         
     
    { 
- carrito.length ==0
+ carrito.length ===0
 ?<Link to="/productos">Tu carrito esta vacio</Link>
   :carrito.map((element)=>{
           return(
@@ -19,7 +19,8 @@ return(
     <img className={element.itemDetalle.class} src={element.itemDetalle.img} alt="" />
                       <h1>{element.itemDetalle.name}</h1>
                       <h2>{element.cantidadContext}</h2>
-                      <button className="btn-details" onClick={()=>estadoGlobal.deleteItem(element.itemDetalle.id)}>Eliminar esta compra </button>
+                      <button className="btn-details" onClick={()=>estadoGlobal.deleteQuantity(element.itemDetalle)}>Borrar item </button>
+                      <button className="btn-details" onClick={()=>estadoGlobal.deleteItem(element.itemDetalle.id)}>X</button>
                     </div>
                    
         )

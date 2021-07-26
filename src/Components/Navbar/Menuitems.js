@@ -1,6 +1,6 @@
 export  const Menuitems = [
     {
-        href:"/ ",
+        href:"/",
         class: "fas fa-Allergies",
         name: "Home",
 

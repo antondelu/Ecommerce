@@ -3,8 +3,19 @@ import logo from "../../logo.svg";
 import {Menuitems} from "./Menuitems";
 import {} from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ShopContext } from "../../Context/cartContext";
+
 
 const Navbar = () => {
+  const estadoGlobal = useContext(ShopContext)
+  let carrito = estadoGlobal.cart
+  let cantidadTotal = 0;
+
+  carrito.forEach(element => {
+    cantidadTotal += element.cantidadContext 
+  });
+
   return (
     <nav className='navBar'>
       <ul>
@@ -18,10 +29,14 @@ const Navbar = () => {
             <li key={item.name}>
             <Link to={item.href}>
               <i  className={item.class}></i>{item.name}
+
             </Link>
           </li>
           )
+
       })}
+
+<span class="badge badge-light cant">{cantidadTotal}</span>
  <li className="nav-item dropdown">
                         <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Categorias

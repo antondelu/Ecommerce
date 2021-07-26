@@ -33,7 +33,7 @@ let { category } = useParams();
                 <figcaption className="caption">
                 <h3>{compo.name}</h3>
                 <p>{compo.price}</p>
-                <ItemCount stock="10" initial="1" />
+               
                <br/>
                 <button><Link to={`/item/${compo.id}`}>Ver mas</Link> </button>
               </figcaption>

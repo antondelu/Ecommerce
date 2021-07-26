@@ -1,7 +1,7 @@
 [
     {
        "class" : "item",
-        "price" : 2039, 
+        "price" : 2000, 
         "id" : 1 ,
         "category": 1,
         "name" : "Reloj 1",
@@ -10,7 +10,7 @@
     },
     {
         "class": "item",
-        "price" : 1099, 
+        "price" : 1000, 
         "id" : 2 ,
         "category": 2,
         "name" : "Reloj 2",

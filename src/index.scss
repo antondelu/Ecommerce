@@ -3,7 +3,7 @@ $gold:#D4AF37;
 $body : #282c34;  
 body {
   margin: 0;
-  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-image: linear-gradient(to left top, #ffeaa7, #fbe094, #f7d782, #f3cd70, #efc35d, #efc15b, #efbe5a, #efbc58, #f2c266, #f5c774, #f8cd82, #fad390);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -701,3 +701,6 @@ border-radius: 100%;
       background-color: $body;
     }
   
+    .cant {
+      float: left;
+    }

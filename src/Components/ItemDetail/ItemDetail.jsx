@@ -21,8 +21,8 @@ const agregarCarrito = (event) => {
   const buscador = estadoGlobal.cart.find(producto => producto.itemDetalle.id == itemDetalle.id)
   if(buscador){
       if(itemDetalle === buscador.itemDetalle){
-        estadoGlobal.setTotalCarrito(estadoGlobal.totalCarrito + estadoGlobal.cantidad * itemDetalle.price)
-        buscador.cantidadContext += estadoGlobal.cantidad
+        estadoGlobal.setTotalCarrito(estadoGlobal.totalCarrito + cantidadContext * itemDetalle.price)
+        buscador.cantidadContext += cantidadContext
       }else{
           estadoGlobal.setCart([...estadoGlobal.cart, itemAgregado])
           estadoGlobal.setTotalCarrito(estadoGlobal.totalCarrito + cantidadContext * itemDetalle.price)

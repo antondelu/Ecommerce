@@ -24,7 +24,13 @@ let priceToSubstract = productToDelete.itemDetalle.price * productToDelete.canti
 setTotalCarrito(totalCarrito - priceToSubstract)
     }
   
-
+const deleteQuantity= (product) =>{
+    const buscador = cart.find(el => el.itemDetalle.id == product.id)
+    if(buscador && buscador.cantidadContext > 1){
+            buscador.cantidadContext -= 1
+            setTotalCarrito(totalCarrito - buscador.itemDetalle.price)
+    }
+    }
     useEffect( () => {
         fetch("/Productos.json")
         .then(response => response.json())
@@ -35,7 +41,7 @@ setTotalCarrito(totalCarrito - priceToSubstract)
             },[])
  
 
-    return <ShopContext.Provider value={{productos,setProductos,description,setDescription,cart,setCart,valor,setValor,cantidad,setCantidad,totalCarrito,setTotalCarrito, vaciarCarrito,deleteItem}}>
+    return <ShopContext.Provider value={{productos,setProductos,description,setDescription,cart,setCart,valor,setValor,cantidad,setCantidad,totalCarrito,setTotalCarrito, vaciarCarrito,deleteItem,deleteQuantity}}>
         {children}
     </ShopContext.Provider>
 }
