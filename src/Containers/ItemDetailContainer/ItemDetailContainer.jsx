@@ -8,10 +8,10 @@ export const ItemDetailContainer = (props) => {
     
     let {id}= useParams()
    useEffect (()=>{
-   
-const itemId = estadoGlobal.productos.find (element => element.id == id)
-estadoGlobal.setDescription(itemId);
 
+const itemId = estadoGlobal.ids.find (element => element.id == id)
+estadoGlobal.setDescription(itemId.data());
+console.log(itemId)
 },[id])
 
 return(

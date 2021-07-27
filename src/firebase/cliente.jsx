@@ -18,4 +18,4 @@ const firebaseConfig = firebase.initializeApp ({
       return firebase.firestore(firebaseConfig)
   }
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+ 

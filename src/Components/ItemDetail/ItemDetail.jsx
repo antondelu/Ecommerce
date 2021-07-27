@@ -52,7 +52,7 @@ const Comprar = () => {
             <div className="img-wrap">
               <img
                 className="img"
-                src={props.item.img}
+           /* src={props.item.img} */  
                 alt=""
               />
             </div>

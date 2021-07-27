@@ -13,7 +13,7 @@ let { category } = useParams();
 
   useEffect( () => {
 
-              const productsToShow = estadoGlobal.productos.filter( element => element.category == category )
+              const productsToShow = estadoGlobal.productos.filter( element => element.categoria == category)
               console.log(productsToShow)
               
               !category 
@@ -22,7 +22,7 @@ let { category } = useParams();
           
           },[category])
     return(
-  products.map((compo) => {
+  products.map((compo, index) => {
       return (
  
           <div className="gallery">
@@ -35,7 +35,7 @@ let { category } = useParams();
                 <p>{compo.price}</p>
                
                <br/>
-                <button><Link to={`/item/${compo.id}`}>Ver mas</Link> </button>
+                <button><Link to={`/item/${estadoGlobal.ids[index].id}`}>Ver mas</Link> </button>
               </figcaption>
             </figure>
             </div>
