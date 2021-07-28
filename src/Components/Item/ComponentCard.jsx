@@ -22,7 +22,7 @@ let { category } = useParams();
           
           },[category])
     return(
-  products.map((compo, index) => {
+  products.map((compo) => {
       return (
  
           <div className="gallery">
@@ -32,10 +32,9 @@ let { category } = useParams();
                 </div>
                 <figcaption className="caption">
                 <h3>{compo.name}</h3>
-                <p>{compo.price}</p>
-               
+                <p>$ {compo.price}</p>
                <br/>
-                <button><Link to={`/item/${estadoGlobal.ids[index].id}`}>Ver mas</Link> </button>
+                <button className="button"><Link to={`/item/${compo.id}`}>Ver mas</Link> </button>
               </figcaption>
             </figure>
             </div>

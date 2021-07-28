@@ -5,12 +5,6 @@ export  const Menuitems = [
         name: "Home",
 
     },
-
-    {
-        href:"#about",
-        class: "icon-user",
-        name: "About", 
-    },
     {
         href:"/productos",
         class: "icon-thumbs-up-alt",
@@ -27,7 +21,7 @@ export  const Menuitems = [
         name: "Vender", 
     },
     {
-        href:"#carrito",
+        href:"/cart",
         class: "icon-phone",
         name: "Mi carrito", 
     },

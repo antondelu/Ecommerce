@@ -13,7 +13,7 @@ export const ItemCount = (props) => {
     return(
         <div>
             <button class="btn-buy"  onClick={resta}>-</button>
-            <input class="count-input" type="number" value={estadoGlobal.valor}/>
+            <input class="count-input" type="text" value={estadoGlobal.valor}/>
             <button  class="btn-buy"  onClick={suma}>+</button>
         </div>
     

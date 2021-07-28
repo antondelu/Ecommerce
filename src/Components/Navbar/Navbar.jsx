@@ -37,12 +37,12 @@ const Navbar = () => {
 
 <span class="badge badge-light cant">{cantidadTotal}</span>
  <li className="nav-item dropdown">
-                        <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <Link className="nav-link dropdown-toggle cat" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Categorias
                         </Link>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <Link to="/productos/1" className="dropdown-item">Nueva coleccion </Link>
-                            <Link to="/productos/2" className="dropdown-item" >Antig</Link>
+                            <Link to="/productos/1" className="dropdown-item">Reloj pulsera</Link>
+                            <Link to="/productos/2" className="dropdown-item" >Pared</Link>
                         </div>
                         </li>
       </ul>

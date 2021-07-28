@@ -9,6 +9,7 @@ import {ImgPor} from "./Components/Portada/PortadaImg.jsx"
 import {Home} from "./Containers/HomeContainer/Home.jsx" 
 import { Cart } from "./Components/Cart/cartWidget.jsx";
 import {ShopComponentContext} from "./Context/cartContext.jsx"
+
 function App() {
   return (
     <ShopComponentContext>

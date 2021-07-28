@@ -4,12 +4,12 @@ import { ImgHome } from "./imgHome.jsx";
 import {Homecard} from "./Homecard.js";
 import {Reloj} from './relojHome/relojHome.jsx'
 
+
 export const Home = ()=>{
     return(
       <>
         <ImgPor/>
         <Reloj/>
-           
         {Homecard.map((item)=>{
           return (
             

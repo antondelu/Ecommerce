@@ -10,7 +10,6 @@ export const ShopComponentContext = ({children}) =>{
     const [valor,setValor] = useState(1);
     const [cantidad, setCantidad] = useState();
     const [totalCarrito, setTotalCarrito] = useState(0);
-    const [ ids, setIds] = useState();
 
 
     const vaciarCarrito= ()=>{
@@ -33,19 +32,26 @@ const deleteQuantity= (product) =>{
             setTotalCarrito(totalCarrito - buscador.itemDetalle.price)
     }
     }
+
+    const crearOrden =(name, tel ,mail)=> {
+        const orden = { buyer : {name, tel ,mail}, item:cart,total: totalCarrito} 
+        const db = getFirestore();
+        db.collection("orden").add(orden);
+        alert("Gracias por tu compra"+ " " + name)
+    }
     useEffect( () => {
        const DB = getFirestore()
        const COLLECTION = DB.collection("productos")
        COLLECTION.get().then(response=> {
 
-      setProductos(response.docs.map (element=>element.data()))
-      setIds (response.docs.map (element=>element))
+        setProductos(response.docs.map( doc =>{ return { ...doc.data(), id: doc.id } } ) ) 
+  
               
               })
             },[])
  
 
-    return <ShopContext.Provider value={{productos,setProductos,description,setDescription,cart,setCart,valor,setValor,cantidad,setCantidad,totalCarrito,setTotalCarrito, vaciarCarrito,deleteItem,deleteQuantity, ids}}>
+    return <ShopContext.Provider value={{productos,setProductos,description,setDescription,cart,setCart,valor,setValor,cantidad,setCantidad,totalCarrito,setTotalCarrito, vaciarCarrito,deleteItem,deleteQuantity,crearOrden}}>
         {children}
     </ShopContext.Provider>
 }
