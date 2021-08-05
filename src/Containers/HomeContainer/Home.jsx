@@ -12,7 +12,7 @@ export const Home = ()=>{
         <Reloj/>
         {Homecard.map((item)=>{
           return (
-            
+      
      <div className={item.class}>
 <div class="container card mb-3 caja" key= {item.href}>
     <div class="row g-0">

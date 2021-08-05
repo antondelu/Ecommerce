@@ -9,6 +9,8 @@ import {ImgPor} from "./Components/Portada/PortadaImg.jsx"
 import {Home} from "./Containers/HomeContainer/Home.jsx" 
 import { Cart } from "./Components/Cart/cartWidget.jsx";
 import {ShopComponentContext} from "./Context/cartContext.jsx"
+import {Checkout} from "./Containers/Checkout/Checkout.jsx"
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route exact path="/productos/:category" component={Card}/>
         <Route exact path="/item/:id" component={ItemDetailContainer}/>
         <Route exact path="/cart" component={Cart}/>
+        <Route exact path="/orden" component={Checkout}/>
               </Switch>
     </BrowserRouter>
     </ShopComponentContext>
