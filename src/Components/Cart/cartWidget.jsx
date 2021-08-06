@@ -37,16 +37,16 @@ return(
 }
 
 
-<div class="roww">
+<div className="roww">
   <p className="finalizar">Para finalizar su compra, llene sus datos</p>
 <span>
-    <input class="balloon" id="galaxy" type="text" onInput={(e)=> {setName(e.target.value)}} placeholder="Nombre"  required/><label for="Nombre">Nombre</label>
+    <input className="balloon" id="galaxy" type="text" onInput={(e)=> {setName(e.target.value)}} placeholder="Nombre"  required/><label for="Nombre">Nombre</label>
   </span>
   <span>
-    <input class="balloon" id="state" type="email" onInput={(e)=> {setMail(e.target.value)}} placeholder="Correo" /><label for="Correo">Correo</label>
+    <input className="balloon" id="state" type="email" onInput={(e)=> {setMail(e.target.value)}} placeholder="Correo" /><label for="Correo">Correo</label>
   </span>
   <span>
-    <input class="balloon" id="planet" type="tel" onInput={(e)=> {setTel(e.target.value)}} placeholder="Telefono"  /><label for="Telefono">Telefono</label>
+    <input className="balloon" id="planet" type="tel" onInput={(e)=> {setTel(e.target.value)}} placeholder="Telefono"  /><label for="Telefono">Telefono</label>
   </span>
 </div>
 

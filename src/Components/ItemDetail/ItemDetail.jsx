@@ -55,9 +55,9 @@ export const ItemDetail = (props) => {
 
   return (
     <div>
-      <div class="fullwidth">
+      <div className="fullwidth">
         <div className="gallery">
-          <figure class="item">
+          <figure className="item">
             <div className="img-wrap">
               <img
                 className="img"
@@ -65,7 +65,7 @@ export const ItemDetail = (props) => {
                 alt=""
               />
             </div>
-            <figcaption class="caption">
+            <figcaption className="caption">
               <h3 className="nameItemDetail">{props.item.name}</h3>
               <p>{props.item.descrip}</p>
               <p>$ {props.item.price}</p>

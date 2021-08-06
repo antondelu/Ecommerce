@@ -35,7 +35,7 @@ const Navbar = () => {
 
       })}
 
-<span class="badge badge-light cant">{cantidadTotal}</span>
+<span className="badge badge-light cant">{cantidadTotal}</span>
  <li className="nav-item dropdown">
                         <Link className="nav-link dropdown-toggle cat" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Categorias

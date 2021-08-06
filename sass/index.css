@@ -903,4 +903,10 @@ body {
 .or {
   padding-right: 8px;
 }
+
+.volver {
+  float: right;
+  margin-right: 20%;
+  margin-top: 5%;
+}
 /*# sourceMappingURL=index.css.map */
