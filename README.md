@@ -29,7 +29,7 @@ Esta realizado con React.js con conexion al servidor** Firebase **.
   },[]);
 ```
 
-##A mejorar  👇
+<h2> A mejorar  👇 </h2>
 - Responsive Design
 
 
@@ -38,4 +38,4 @@ Esta realizado con React.js con conexion al servidor** Firebase **.
 
 
 
-###Fin
+<h2>Fin </h2>
