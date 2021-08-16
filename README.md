@@ -12,7 +12,7 @@ Instalacion del entorno - Node.js
 
 
 <h2>Descripción </h2>
-Este proyecto forma parte de la carrera Desarrollo Front end de <b> Coder house </b>
+Este proyecto forma parte de la carrera Desarrollo Front end de <b> Coder house. </b> <br>
 Se utiliza  para la maquetacion del sitio HTML5 , css ( Sass) 
                             -   npm install --save-dev node-sass
                                                                  
