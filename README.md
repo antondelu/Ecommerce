@@ -6,8 +6,8 @@ Instalacion del entorno - Node.js
 1.   Ejecutar comandos:<br>
          - npm install -g  create-react-app <br>
          -  create-react-app  <br>
-		 - npx create-react-app my-app 
-		 - cd  my-app <br>
+		 - npx create-react-app my-app >
+		 - cd my-app 
 		 - npm start .
 
 
