@@ -3,16 +3,16 @@
 Instalacion del entorno - Node.js
 
 1. Ingresar a https://nodejs.org/en/ 
-1.   Ejecutar comandos:
-         - npm install -g  create-react-app 
-         -  create-react-app 
-		 - npx create-react-app my-app
-		 - cd  my-app
+1.   Ejecutar comandos:<br>
+         - npm install -g  create-react-app <br>
+         -  create-react-app  <br>
+		 - npx create-react-app my-app 
+		 - cd  my-app <br>
 		 - npm start .
 
 
-##Descripción
-Este proyecto forma parte de la carrera Desarrollo Front end de **Coder house **
+<h2>Descripción </h2>
+Este proyecto forma parte de la carrera Desarrollo Front end de <b> Coder house </b>
 Se utiliza  para la maquetacion del sitio HTML5 , css ( Sass) 
                             -   npm install --save-dev node-sass
                                                                  
