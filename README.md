@@ -13,10 +13,10 @@ Instalacion del entorno - Node.js
 
 <h2>Descripción </h2>
 Este proyecto forma parte de la carrera Desarrollo Front end de <b> Coder house. </b> <br>
-Se utiliza  para la maquetacion del sitio HTML5 , css ( Sass) 
+Se utiliza  para la maquetacion del sitio HTML5 , css ( Sass) <br>
                             -   npm install --save-dev node-sass
                                                                  
-Esta realizado con React.js con conexion al servidor** Firebase **.
+Esta realizado con React.js con conexion al servidor <b>Firebase </b>.
 　
 
 ```javascript
