@@ -8,7 +8,8 @@ Instalacion del entorno - Node.js
          -  create-react-app 
 		 - npx create-react-app my-app
 		 - cd  my-app
-		 - npm start 
+		 - npm start .
+
 
 ##Descripción
 Este proyecto forma parte de la carrera Desarrollo Front end de **Coder house **
