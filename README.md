@@ -2,40 +2,29 @@
 
 Instalacion del entorno - Node.js
 
-1. Ingresar a https://nodejs.org/en/ 
-1.   Ejecutar comandos:<br>
-         - npm install -g  create-react-app <br>
-         -  create-react-app  <br>
-		 - npx create-react-app my-app <br>
-		 - cd my-app <br>
-		 - npm start .
-
+1. Ingresar a https://nodejs.org/en/
+1. Ejecutar comandos:<br>
+   - git clone <br>
+   - npm install <br>
+   - npm start .
 
 <h2>Descripción </h2>
 Este proyecto forma parte de la carrera Desarrollo Front end de <b> Coder house. </b> <br>
 Se utiliza  para la maquetacion del sitio HTML5 , css ( Sass) <br>
-                            -   npm install --save-dev node-sass
                                                                  
-Esta realizado con React.js con conexion al servidor <b>Firebase </b>.
+ <b> React.js + Firebase </b> como persistencia.
 　
 
 ```javascript
  useEffect( () => {
-        const DB = getFirestore()
-        const COLLECTION = DB.collection("orden")
-        COLLECTION.get().then(response=> {
-            let ordenes = (response.docs.map( doc =>{ return { ...doc.data(), id: doc.id } } ) ) 
-            console.log(ordenes)
+        const db = getFirestore()
+        const collection = DB.collection("orden")
+        collection.get().then(response=> {
+            let ordenes = (response.docs.map( doc =>{ return { ...doc.data(), id: doc.id } } ) )
   },[]);
 ```
 
 <h2> A mejorar  👇 </h2>
 - Responsive Design
-
-
-
-
-
-
 
 <h2>Fin </h2>
