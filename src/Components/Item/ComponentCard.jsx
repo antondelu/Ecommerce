@@ -34,7 +34,7 @@ let { category } = useParams();
                 <h3>{compo.name}</h3>
                 <p>$ {compo.price}</p>
                <br/>
-                <button className="button"><Link to={`/item/${compo.id}`}>Ver mas</Link> </button>
+                <button className="buttonProducts"><Link to={`/item/${compo.id}`}>Detalles</Link> </button>
               </figcaption>
             </figure>
             </div>
