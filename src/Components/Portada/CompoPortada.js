@@ -1,5 +1,5 @@
 export const Portada = [
     {
-        img : "./img/port.jpg"
+        img : "../../../public/videoReloj.mp4" 
     }
 ]

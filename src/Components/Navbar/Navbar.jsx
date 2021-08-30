@@ -26,11 +26,13 @@ const Navbar = () => {
         </li>
       {Menuitems.map((item)=>{
           return (
+    
             <li key={item.name}>
             <Link to={item.href}>
               <i  className={item.class}></i>{item.name}
             </Link>
           </li>
+  
           )
 
       })}
